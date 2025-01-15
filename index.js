@@ -41,7 +41,7 @@ app.use("/event", verifyJWT, eventRouter);
 
 mongoose
   .connect(
-    "mongodb+srv://nishthaa2003:nishthaa2003@eventrsvpmanager.bcdpz.mongodb.net/?retryWrites=true&w=majority&appName=EventRSVPManager"
+    `mongodb+srv://nishthaa2003:nishthaa2003@eventrsvpmanager.bcdpz.mongodb.net/?retryWrites=true&w=majority&appName=EventRSVPManager`
   )
   .then(() => {
     app.listen(PORT, () => {
@@ -51,5 +51,3 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-
-export default app;
