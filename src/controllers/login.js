@@ -53,8 +53,8 @@ export const postSignup = responseHandler(async (req, res, next) => {
     // console.log(accessToken);
     const options = {
       httpOnly: true,
-      // secure: true,
-      // sameSite: "None",
+      secure: true,
+      sameSite: "None",
     };
 
     let user = await User.findOne({
@@ -102,8 +102,8 @@ export const postLogin = responseHandler(async (req, res, next) => {
     // console.log(accessToken);
     const options = {
       httpOnly: true,
-      // secure: true,
-      // sameSite: "None",
+      secure: true,
+      sameSite: "None",
     };
 
     const user = { ...existingUser.toObject() };

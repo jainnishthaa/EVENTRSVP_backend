@@ -11,7 +11,7 @@ import eventRouter from "./src/routers/event.js";
 const app = express();
 const PORT = process.env.PORT;
 
-const allowedOrigins = ["http://localhost:3000", "http://127.0.0.1:3000"];
+const allowedOrigins = ["http://localhost:3000", "http://127.0.0.1:3000","https://eventrsvp-frontend.vercel.app"];
 app.use(
   cors({
     origin: function (origin, callback) {
